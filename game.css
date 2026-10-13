@@ -13,6 +13,19 @@ html {
 	-webkit-animation: none;
 }
 
+body {
+  margin: 0;
+  background-image: url("img/backround.jpg");
+  background-size: cover;                    /* fill the whole screen */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+html, body {
+  height: 100%;   /* page is as tall as the window */
+  margin: 0;
+}
+
 @keyframes rotation {
 	from {
 		transform: rotate(0deg);

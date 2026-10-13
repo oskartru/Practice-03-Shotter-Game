@@ -102,13 +102,17 @@ class Game {
      */
     removeOpponent () {
         if (this.opponent instanceof Boss) {
-            this.endGame(); // The final boss is defeated: the game is over
-            return;
-        }
-        if (this.opponent) {
-            document.body.removeChild(this.opponent.image);
-        }
-        this.opponent = new Boss(this);
+        this.endGame(); // The final boss is defeated: the game is over
+        return;
+    }
+    if (this.opponent) {
+        document.body.removeChild(this.opponent.image);
+    }
+    if (this.score >= OPPONENTS_BEFORE_BOSS) {
+        this.opponent = new Boss(this);     // Enough triangles defeated: boss time
+    } else {
+        this.opponent = new Opponent(this); // Another triangle
+    }
     }
 
     /**

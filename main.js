@@ -3,6 +3,7 @@ const OPPONENT_HEIGHT = 5,
     OPPONENT_PICTURE_DEAD = "assets/opponent_dead.png",
     OPPONENT_SPEED = 5,
     OPPONENT_WIDTH = 5,
+    OPPONENTS_BEFORE_BOSS = 3, // triangles to defeat before the boss
     BOSS_PICTURE = "assets/boss.png", // [TASK 3] Image of the final boss (pentagon)
     BOSS_PICTURE_DEAD = "assets/boss_dead.png", // [TASK 3] Image of the defeated boss (star)
     GAME_OVER_PICTURE = "assets/game_over.png",
