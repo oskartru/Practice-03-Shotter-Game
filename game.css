@@ -1,0 +1,58 @@
+html {
+  overflow: hidden;
+}
+
+/* [TASK 3] The boss rotates just like the opponent */
+.Opponent, .Boss {
+	animation: rotation 3s infinite linear;
+	-webkit-animation: rotation 3s infinite linear;
+}
+
+.paused .Opponent, .paused .Boss {
+	animation: none;
+	-webkit-animation: none;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+@-webkit-keyframes rotation {
+	from {
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+.gamebutton {
+	border: none;
+	background: #ddd;
+	color: #333;
+	padding: 10px 20px;
+	outline: none;
+	font-family: monospace;
+	cursor: pointer;
+}
+
+/* [TASK 2.3] Score and lives box in the top-right corner */
+#info {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 10px 20px;
+	list-style: none;
+	background: #ddd;
+	color: #333;
+	font-family: monospace;
+	font-size: 14px;
+}
